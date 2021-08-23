@@ -1,170 +1,151 @@
 import React from 'react';
-import styled from 'styled-components'
-import Axios from 'axios'
+import styled from 'styled-components';
+import Axios from 'axios';
 
 const BackgroundBar = styled.div`
-width: 80%;
-background-color: #F0F2F2;
-border-radius: 10px;
-box-shadow: inset 0 0 0 1px #E3E6E6;
-margin: 1px 0px -50px 0px;
-position: relative;
-left: 2rem;
- &&:hover {
-  outline: 2px solid #DE7921;
- }
-
-`
-
-
+  width: 80%;
+  background-color: #F0F2F2;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1px #E3E6E6;
+  margin: 1px 0px -50px 0px;
+  position: relative;
+  left: 2rem;
+  &&:hover {
+    outline: 2px solid #DE7921;
+  }
+`;
 
 const Bar = styled.div`
-width: 92%;
-height: 30px;
-background-color: #FFA41C;
-text-align: center;
-line-height: 30px;
-color: black;
-border-radius: 10px;
-
-
-`
+  width: 92%;
+  height: 30px;
+  background-color: #FFA41C;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  border-radius: 10px;
+`;
 
 const Bar2 = styled.div`
-width: 5%;
-height: 30px;
-background-color: #FFA41C;
-text-align: center;
-line-height: 30px;
-color: black;
-border-radius: 10px;
-
-
-`
+  width: 5%;
+  height: 30px;
+  background-color: #FFA41C;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  border-radius: 10px;
+`;
 
 const Bar3 = styled.div`
-width: 1%;
-height: 30px;
-background-color: #FFA41C;
-text-align: center;
-line-height: 30px;
-color: black;
-border-radius: 10px;
-
-
-`
-
-
+  width: 1%;
+  height: 30px;
+  background-color: #FFA41C;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  border-radius: 10px;
+`;
 
 const Bar4 = styled.div`
-width: 10%;
-height: 30px;
-background-color: #FFA41C;
-text-align: center;
-line-height: 30px;
-color: black;
-border-radius: 10px;
-
-
-`
-
-
-
+  width: 10%;
+  height: 30px;
+  background-color: #FFA41C;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  border-radius: 10px;
+`;
 
 const Bar5 = styled.div`
-width: 1%;
-height: 30px;
-background-color: #FFA41C;
-text-align: center;
-line-height: 30px;
-border-radius: 10px;
-color: black;
+  width: 1%;
+  height: 30px;
+  background-color: #FFA41C;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px;
+  color: black;
+`;
 
-`
 const Lettering = styled.h1`
-position: relative;
-top: 1rem;
-left: 19rem;
-font-family : 'Roboto', sans-serif;
-font-weight : 500;
-color: #007185;
-font-size: 18px;
-`
+  position: relative;
+  top: 1rem;
+  left: 19rem;
+  font-family : 'Roboto', sans-serif;
+  font-weight : 500;
+  color: #007185;
+  font-size: 18px;
+`;
+
 const Lettering2 = styled.h1`
-position: relative;
-top: 1rem;
-left: 19rem;
-font-family : 'Roboto', sans-serif;
-font-weight : 500;
-color: #007185;
-font-size: 18px;
-`
+  position: relative;
+  top: 1rem;
+  left: 19rem;
+  font-family : 'Roboto', sans-serif;
+  font-weight : 500;
+  color: #007185;
+  font-size: 18px;
+`;
 
 const Lettering3 = styled.h1`
-position: relative;
-top: 1rem;
-left: 19rem;
-font-family : 'Roboto', sans-serif;
-font-weight : 500;
-color: #007185;
-font-size: 18px;
-`
+  position: relative;
+  top: 1rem;
+  left: 19rem;
+  font-family : 'Roboto', sans-serif;
+  font-weight : 500;
+  color: #007185;
+  font-size: 18px;
+`;
 
 const Lettering4 = styled.h1`
-position: relative;
-top: 1rem;
-left: 19rem;
-font-family : 'Roboto', sans-serif;
-font-weight : 500;
-color: #007185;
-font-size: 18px;
-`
-
+  position: relative;
+  top: 1rem;
+  left: 19rem;
+  font-family : 'Roboto', sans-serif;
+  font-weight : 500;
+  color: #007185;
+  font-size: 18px;
+`;
 
 const Lettering5 = styled.h1`
-position: relative;
-top: 1rem;
-left: 19rem;
-font-family : 'Roboto', sans-serif;
-font-weight : 500;
-color: #007185;
-font-size: 18px;
-`
-
-
+  position: relative;
+  top: 1rem;
+  left: 19rem;
+  font-family : 'Roboto', sans-serif;
+  font-weight : 500;
+  color: #007185;
+  font-size: 18px;
+`;
 
 const AmazonRating = styled.h1`
-color: #007185;
-position: relative;
-left: 0.5rem;
-font-size: 15px;
-font-family : 'Roboto', sans-serif;
-font-weight : 500;
-cursor: grab;
+  color: #007185;
+  position: relative;
+  left: 0.5rem;
+  font-size: 15px;
+  font-family : 'Roboto', sans-serif;
+  font-weight : 500;
+  cursor: grab;
 
- &&:hover {
-  text-decoration: underline;
- }
-`
+  &&:hover {
+    text-decoration: underline;
+  }
+`;
+
 const OutOf = styled.h1`
-position: relative;
-left: 10rem;
-
-font-size: 25px;
-font-family: 'Roboto', sans-serif;
-font-weight: 300;
-
-`
+  position: relative;
+  left: 10rem;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+`;
 
 const Stars = styled.h1 `
- position: relative;
- top: -1.2rem;
- left: -1rem;
- color: #007185;
- font-size: 15px;
- font-family: 'Roboto', sans-serif;
- font-weight: 500;
-`
+  position: relative;
+  top: -1.2rem;
+  left: -1rem;
+  color: #007185;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+`;
 
 const Caret = styled.p`
   position: relative;
@@ -175,70 +156,52 @@ const Caret = styled.p`
 `;
 
 
-const CustomerRev =  styled.h1`
-
-position: relative;
-top: 4rem;
-font-family: 'roboto', sans-serif;
-font-size: 30px;
-font-weight: 500;
-
-`
-
+const CustomerRev = styled.h1`
+  position: relative;
+  top: 4rem;
+  font-family: 'roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+`;
 
 const GlobalRating = styled.h1`
-position: relative;
-font-family: 'Roboto', sans-serif;
-font-weight: 300;
-color: #565959;
-top: -1rem;
-left: 0rem;
-font-size: 15px;
-
-`
-
-
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #565959;
+  top: -1rem;
+  left: 0rem;
+  font-size: 15px;
+`;
 
 const GlobalStarResize = styled.img`
-
-position: relative;
-width: 10rem;
-top: 3rem;
-left: -0.3rem;
-height: 2rem;
-
-`
+  position: relative;
+  width: 10rem;
+  top: 3rem;
+  left: -0.3rem;
+  height: 2rem;
+`;
 
 class Star extends React.Component {
-
-
   constructor(props) {
     super(props);
     this.state = {
-       reviews: this.props.props,
-       starRating: 0
-    }
+      reviews: this.props.props,
+      starRating: 0
+    };
   }
-
-
-
 
   componentDidMount() {
     Axios('/reviews').then(reviews => {
-       console.log(reviews.data)
-       this.setState({
-         reviews: reviews.data
-       })
+      this.setState({
+        reviews: reviews.data
+      });
     }).then(() => {
       let star1 = 0;
       let star2 = 0;
       let star3 = 0;
       let star4 = 0;
       let star5 = 0;
-
-
-
-      //
 
       for (let i = 0; i < this.state.reviews.length; i++) {
         if (this.state.reviews[i].stars === 1) {
@@ -252,76 +215,58 @@ class Star extends React.Component {
         } else if (this.state.reviews[i].stars === 5) {
           star5++;
         }
-
-
       }
 
-   // then divide
+      let star1Value = (star1 / this.state.reviews.length) * 100;
+      let star2Value = (star2 / this.state.reviews.length) * 100;
+      let star3Value = (star3 / this.state.reviews.length) * 100;
+      let star4Value = (star4 / this.state.reviews.length) * 100;
+      let star5Value = (star5 / this.state.reviews.length) * 100;
 
-   let star1Value = (star1 / this.state.reviews.length) * 100
-   let star2Value = (star2 / this.state.reviews.length) * 100
-   let star3Value = (star3 / this.state.reviews.length) * 100
-   let star4Value = (star4 / this.state.reviews.length) * 100
-   let star5Value = (star5 / this.state.reviews.length) * 100
-   console.log(star5Value)
-    document.querySelector('.star5_percent').style.width = `${star5Value}%`
-    document.querySelector('.star4_percent').style.width = `${star4Value}%`
-    document.querySelector('.star3_percent').style.width = `${star3Value}%`
-    document.querySelector('.star2_percent').style.width = `${star2Value}%`
-    document.querySelector('.star1_percent').style.width = `${star1Value}%`
+      document.querySelector('.star5_percent').style.width = `${star5Value}%`;
+      document.querySelector('.star4_percent').style.width = `${star4Value}%`;
+      document.querySelector('.star3_percent').style.width = `${star3Value}%`;
+      document.querySelector('.star2_percent').style.width = `${star2Value}%`;
+      document.querySelector('.star1_percent').style.width = `${star1Value}%`;
 
+      document.querySelector('.star_5').innerHTML = `${Math.floor(star5Value)}%`;
+      document.querySelector('.star_4').innerHTML = `${Math.floor(star4Value)}%`;
+      document.querySelector('.star_3').innerHTML = `${Math.floor(star3Value)}%`;
+      document.querySelector('.star_2').innerHTML = `${Math.floor(star2Value)}%`;
+      document.querySelector('.star_1').innerHTML = `${Math.floor(star1Value)}%`;
 
+      let starAvg = (5 * star5 + 4 * star4 + 3 *star3 + 2 *star2 + 1 * star1) / (star5 + star4 + star3 + star2 + star1);
 
-    document.querySelector('.star_5').innerHTML = `${Math.floor(star5Value)}%`
-    document.querySelector('.star_4').innerHTML = `${Math.floor(star4Value)}%`
-    document.querySelector('.star_3').innerHTML = `${Math.floor(star3Value)}%`
-    document.querySelector('.star_2').innerHTML = `${Math.floor(star2Value)}%`
-    document.querySelector('.star_1').innerHTML = `${Math.floor(star1Value)}%`
-
-    let starAvg = (5 * star5 + 4 * star4 + 3 *star3 + 2 *star2 + 1 * star1) / (star5 + star4 + star3 + star2 + star1)
-
-    document.querySelector('.totalScore').innerHTML = starAvg.toFixed(2) + ' out of 5';
+      document.querySelector('.totalScore').innerHTML = starAvg.toFixed(2) + ' out of 5';
 
 
-     this.setState({
-       starRating: starAvg
-     })
-
-    })
-
-
-
-
-
-     //
-
-
-
-
-    }
+      this.setState({
+        starRating: starAvg
+      });
+    });
+  }
 
 
 
   render() {
-   let starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/1rating.png'
-
-   switch (Math.floor(this.state.starRating)) {
-     case 1:
-      starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/1rating.png'
-     break;
-     case 2:
-       starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/2rating.png'
-     break;
-     case 3:
-       starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/3rating.png'
-     break;
-     case 4:
-       starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/5rating.png'
-     break;
-     case 5:
-       starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/boxback.jpg'
-     break;
-   }
+    let starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/1rating.png';
+    switch (Math.floor(this.state.starRating)) {
+    case 1:
+      starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/1rating.png';
+      break;
+    case 2:
+      starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/2rating.png';
+      break;
+    case 3:
+      starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/3rating.png';
+      break;
+    case 4:
+      starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/5rating.png';
+      break;
+    case 5:
+      starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/boxback.jpg';
+      break;
+    }
 
 
     return (
@@ -357,17 +302,8 @@ class Star extends React.Component {
         <Stars>1 star</Stars>
         <AmazonRating> <Caret>&lsaquo;</Caret> How are ratings reviewed?</AmazonRating>
       </div>
-    )
-
+    );
   }
 }
-
-
-
-
-
-
-
-
 
 export default Star;
