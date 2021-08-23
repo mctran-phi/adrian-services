@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import ps1 from '../../public/ps1.jpg';
+import ps2 from '../../public/ps2.jpg';
+import ps3 from '../../public/ps3.jpg';
+import ps4 from '../../public/ps4.jpg';
 
 const ImageFormat = styled.div`
   display: flex;
@@ -10,10 +14,10 @@ const ImageFormat = styled.div`
 const Images = () => {
   return (
     <ImageFormat>
-      <img src='https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/boxback.jpg'></img>
-      <img src='https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/boxfront.jpg'></img>
-      <img src='https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/multiplecontrollers.jpg'></img>
-      <img src='https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/unboxed.jpg'></img>
+      <img src={ps1}></img>
+      <img src={ps2}></img>
+      <img src={ps3}></img>
+      <img src={ps4}></img>
     </ImageFormat>
   );
 };

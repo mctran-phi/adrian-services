@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Axios from 'axios';
+import star1 from '../../public/star.png';
+import star2 from '../../public/star2.png';
+import star3 from '../../public/star3.png';
+import star4 from '../../public/star4.png';
+import star5 from '../../public/star5.png';
 
 const BackgroundBar = styled.div`
   width: 80%;
@@ -246,25 +251,23 @@ class Star extends React.Component {
     });
   }
 
-
-
   render() {
-    let starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/1rating.png';
+    let starImage = star1;
     switch (Math.floor(this.state.starRating)) {
     case 1:
-      starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/1rating.png';
+      starImage = star1;
       break;
     case 2:
-      starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/2rating.png';
+      starImage = star2;
       break;
     case 3:
-      starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/3rating.png';
+      starImage = star3;
       break;
     case 4:
-      starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/5rating.png';
+      starImage = star4;
       break;
     case 5:
-      starImage = 'https://badgersnax.s3-us-west-2.amazonaws.com/hrr50-fec/AdrianPhotos/boxback.jpg';
+      starImage = star5;
       break;
     }
 

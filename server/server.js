@@ -9,8 +9,9 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/reviews', (req, res) => {
-  const data = Reviews.find({});
-  res.send(data);
+  Reviews.find()
+    .then(data => res.send(data))
+    .catch(err => console.error(err));
 });
 
 app.listen(PORT, () => {

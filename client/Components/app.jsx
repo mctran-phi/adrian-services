@@ -214,7 +214,6 @@ class App extends React.Component {
     let doesInclude = this.state.metionedReview;
     let pagNum = 0;
     let currNum = 0;
-    let currentReviews = 0;
     let newPaginatedArray = this.state.paginatedArray.slice(0, this.state.currentPage + 2);
 
     return (
@@ -240,14 +239,11 @@ class App extends React.Component {
           <AmazonText>Top reviews from the United States.</AmazonText>
           { this.state.metionedReview !== '' ? <FlexMetion><CurrentMetion>Showing reviews with "{this.state.metionedReview}"</CurrentMetion> <ClearMetion onClick = {this.resetSearch.bind(this)}> Clear filter.</ClearMetion></FlexMetion> : null}
           {this.state.showingReviews.map(item => {
-            if (item.review.includes(doesInclude)) {
-              currentReviews++;
-            }
-            return item.review.includes(doesInclude) ? <Review props={item} /> : null;
+            return item.review.includes(doesInclude) ? <Review key={item._id} props={item} /> : null;
           })
           }
           <Pagination>
-            {newPaginatedArray.map(item => {
+            {newPaginatedArray.map((item, i) => {
               if (currNum === 0) {
                 pagNum = 0;
               } else {
@@ -255,7 +251,7 @@ class App extends React.Component {
               }
               currNum++;
               let AssignedVariable = pagNum;
-              return pagNum !== 0 ? <PagNum onClick={() => this.changePage(AssignedVariable)}>{pagNum}</PagNum> : null;
+              return pagNum !== 0 ? <PagNum key={item[i]._id} onClick={() => this.changePage(AssignedVariable)}>{pagNum}</PagNum> : null;
             })
             }
           </Pagination>
