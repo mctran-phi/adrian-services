@@ -14,13 +14,12 @@ const AmazonUser = styled.div`
   position: relative;
   font-size: 20px;
   font-weight: 300;
-  top: 3.5rem;
+  top: 2.5rem;
   left: 3.5rem;
 `;
 
 const AmazonTitle = styled.h1`
   position: relative;
-  top: 0.3rem;
   left: 10rem;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
@@ -67,7 +66,6 @@ const UserImg = styled.img`
 const StarResize = styled.img`
   position: relative;
   width: 8rem;
-  left: 1rem;
   top: 2.4rem;
   height: 1.8rem;
 `;

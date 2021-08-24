@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ReviewText = styled.h1`
-  position: relative;
+  text-align: center;
   font-family: 'Roboto', sans-serif;
   font-size: 25px;
   font-weight 500;
@@ -32,7 +32,7 @@ const WriteReview = () => {
   return (
     <div>
       <Container>
-        <ReviewText>Review this product.</ReviewText>
+        <ReviewText>Review this product</ReviewText>
         <ButtonAmazon> Write a customer review</ButtonAmazon>
         <TextStyle>Share your thoughts with other customers</TextStyle>
       </Container>

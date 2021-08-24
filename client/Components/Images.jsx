@@ -7,8 +7,8 @@ import ps4 from '../../public/ps4.jpg';
 
 const ImageFormat = styled.div`
   display: flex;
-  flex-flow: row wrap;
-  width: 60rem;
+  justify-content: space-between;
+  width: 60vw;
 `;
 
 const Images = () => {

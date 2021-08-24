@@ -14,6 +14,7 @@ const BackgroundBar = styled.div`
   box-shadow: inset 0 0 0 1px #E3E6E6;
   margin: 1px 0px -50px 0px;
   position: relative;
+  height: 20px;
   left: 2rem;
   &&:hover {
     outline: 2px solid #DE7921;
@@ -22,7 +23,7 @@ const BackgroundBar = styled.div`
 
 const Bar = styled.div`
   width: 92%;
-  height: 30px;
+  height: 20px;
   background-color: #FFA41C;
   text-align: center;
   line-height: 30px;
@@ -32,7 +33,7 @@ const Bar = styled.div`
 
 const Bar2 = styled.div`
   width: 5%;
-  height: 30px;
+  height: 20px;
   background-color: #FFA41C;
   text-align: center;
   line-height: 30px;
@@ -42,7 +43,7 @@ const Bar2 = styled.div`
 
 const Bar3 = styled.div`
   width: 1%;
-  height: 30px;
+  height: 20px;
   background-color: #FFA41C;
   text-align: center;
   line-height: 30px;
@@ -52,7 +53,7 @@ const Bar3 = styled.div`
 
 const Bar4 = styled.div`
   width: 10%;
-  height: 30px;
+  height: 20px;
   background-color: #FFA41C;
   text-align: center;
   line-height: 30px;
@@ -62,7 +63,7 @@ const Bar4 = styled.div`
 
 const Bar5 = styled.div`
   width: 1%;
-  height: 30px;
+  height: 20px;
   background-color: #FFA41C;
   text-align: center;
   line-height: 30px;
@@ -197,7 +198,7 @@ class Star extends React.Component {
   }
 
   componentDidMount() {
-    Axios('/reviews').then(reviews => {
+    Axios('http://localhost:3333/reviews').then(reviews => {
       this.setState({
         reviews: reviews.data
       });

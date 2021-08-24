@@ -7,26 +7,19 @@ import Star from './Star.jsx';
 import styled from 'styled-components';
 import WriteReview from './WriteReview.jsx';
 
-const MainDiv = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
- `;
-
 const ReviewComp = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  min-inline-size: max-content
+  justify-content: space-between;
+  overflow: hidden;
 `;
 
 const StarComp = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid #e7e7e7;
+  width: 30vw;
+  min-width: 400px;
+  padding-left: 50px;
 `;
 
 const AmazonText = styled.h1`
@@ -40,7 +33,6 @@ const Pagination = styled.div`
 
 const InsideDiv = styled.div`
   color: black;
-  float: left;
   padding: 8px 16px;
   text-decoration: none
 `;
@@ -76,13 +68,14 @@ const PagNum = styled.h1`
 
 const TestComp = styled.div`
   display: flex;
-  flex-flow:row wrap;
-  flex-direction: column
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 60vw;
 `;
 
 
 const MetionsBlock = styled.div`
-  width:50rem;
+  width: 50rem;
   display: flex;
 `;
 
@@ -122,7 +115,6 @@ const ClearMetion = styled.h1`
 `;
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -137,7 +129,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    Axios('/reviews').then(reviews => {
+    Axios('http://localhost:3333/reviews').then(reviews => {
       if (this.state.currentSelector === 'top') {
         reviews.data.sort((a, b) => {
           return a.foundHelpful - b.foundHelpful;
@@ -175,7 +167,7 @@ class App extends React.Component {
   }
 
   changeMetionedReview(query) {
-    Axios('/reviews').then(reviews => {
+    Axios('http://localhost:3333/reviews').then(reviews => {
       this.setState({
         showingReviews: reviews.data
       });
